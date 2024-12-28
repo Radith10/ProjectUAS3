@@ -43,7 +43,7 @@
                             Apakah Anda datang untuk makan siang, makan malam, atau sekadar bersantai dengan
                             teman-teman,
                             Ayam Geprek Jogja adalah pilihan yang tepat!.</p>
-                        <p><a href="{{ route('about.index') }}" class="btn btn-primary btn-outline">Our History</a>
+                        <p><a href="#" class="btn btn-primary btn-outline">Our History</a>
                         </p>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
     </div>
 
     <div class="section-heading text-center">
-        <p><a href="{{ route('about.index') }}" class="btn btn-primary btn-outline">Our History</a></p>
+        <p><a href="#" class="btn btn-primary btn-outline">Our History</a></p>
     </div>
 
     <div id="fh5co-featured-testimony" class="fh5co-section">
@@ -309,8 +309,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae
                         cupiditate, sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus
                         veniam ipsa fuga maxime odio? Eaque!</p>
-                    <p><a href="{{ route('reservation.index') }}" class="btn btn-primary btn-outline">Book
-                            Now</a></p>
+                    <p><a href="#" class="btn btn-primary btn-outline">Book Now</a></p>
                 </div>
             </div>
         </div>
