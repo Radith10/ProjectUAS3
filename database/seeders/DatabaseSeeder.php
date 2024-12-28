@@ -2,9 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use App\Models\Menu;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
+use App\Models\Reservation;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,11 +16,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // Membuat 1 user
+        User::create([
+            'name' => 'Radith',
+            'email' => 'radith23ti@mahasiswa.pcr.ac.id',
+            'password' => Hash::make('password123'),
+        ]);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        $this->call([
+            MenuSeeder::class,
+            ReservationSeeder::class,
+            ReservationMenuSeeder::class,
         ]);
     }
 }
