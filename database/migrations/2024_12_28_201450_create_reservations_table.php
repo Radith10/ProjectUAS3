@@ -13,14 +13,11 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
             $table->string('nama_pemesan');
             $table->string('no_hp');
             $table->timestamp('waktu_pesan');
             $table->timestamp('waktu_terima');
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

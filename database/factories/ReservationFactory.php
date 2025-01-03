@@ -22,7 +22,6 @@ class ReservationFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => User::factory(),
             'nama_pemesan' => $this->faker->name,
             'no_hp' => $this->faker->phoneNumber,
             'waktu_pesan' => $this->faker->dateTime,
