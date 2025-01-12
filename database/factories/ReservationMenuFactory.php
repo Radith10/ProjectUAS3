@@ -21,9 +21,14 @@ class ReservationMenuFactory extends Factory
      */
     public function definition(): array
     {
+        $menu = Menu::inRandomOrder()->first();
+        $jumlah = $this->faker->numberBetween(1, 10);
+
         return [
-            'reservation_id' => Reservation::factory(),
-            'menu_id' => Menu::factory(),
+            'reservation_id' => Reservation::inRandomOrder()->first()->id,
+            'menu_id' => $menu->id,
+            'jumlah' => $jumlah,
+            'total_harga' => $menu->harga * $jumlah,
         ];
     }
 }

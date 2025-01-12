@@ -12,7 +12,7 @@ class Controller extends BaseController
 
     public function menu()
     {
-        return view('menu');
+        return view('home');
     }
     public function reservation()
     {

@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('reservation_id');
             $table->unsignedBigInteger('menu_id');
+            $table->integer('jumlah')->nullable();
+            $table->decimal('total_harga', 10, 2)->nullable();
             $table->timestamps();
 
             $table->foreign('reservation_id')->references('id')->on('reservations')->onDelete('cascade');
